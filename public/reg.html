@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oracle | 创建账户</title>
+    <link rel="stylesheet" href="CSS/reg.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body class="body_bg">
+    <!-- logo -->
+    <div id="wrap">
+        <header class="logo">
+            <img src="image/reg/oracle-logo.png" alt="">
+        </header>
+    </div>
+    <!-- form -->
+    <div class="content">
+        <div class="table">
+            <div class="table_header">
+                <div>
+                    <img src="image/reg/user-icon.png" alt="">
+                </div>
+                <div>
+                    <div style="margin-top:15px"></div>
+                </div>
+                <div>
+                    <span class="table_header">创建您的Oracle账号</span>
+                </div>
+                <div>
+                    <div style="margin-top:25px"></div>
+                </div>
+            </div>
+            <span class="login_text">已有 Oracle账号？ </span>
+            <a href="javascript:;" class="login_btn">
+                <span>登录</span>
+            </a>
+        </div>
+        <div style="margin-top:15px"></div>
+        <div style="margin-top:30px"></div>
+        <div class="form">
+            <table>
+                <!-- 用户名 -->
+                <tr>
+                    <td class="title td_position">电子邮箱地址</td>
+                    <td class="td_position">
+                        <table>
+                            <tr>
+                                <td class="td_position outer">
+                                    <input id="email" type="text" class="email-content">
+                                    <img src="image/reg/icon1.png" alt="" class="input_img info1_fail d-none">
+                                </td>
+                                <td class="td_position">
+                                    <span class="info remind1 d-none">您的电子邮箱即为您的用户名。</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td class="info1_fail d-none">
+                                    <img src="image/reg/myprofile-error-icon.png" alt="">
+                                </td>
+                                <td class="alarm info1_fail d-none">此电子邮件地址无效</td>
+                            </tr>
+                            <tr>
+                                <td class="info1_success d-none">
+                                    <img src="image/reg/myprofile-success-icon.png" alt="">
+                                </td>
+                                <td class="alarm info1_success d-none">我们会向您发送一封确认电子邮件</td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+                <!--密码 -->
+                <tr>
+                        <td class="title td_position">密码</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="upwd" type="password" class="email-content">
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info2_fail d-none">
+                                    </td>
+                                    <td class="td_position">
+                                        <span class="info">密码必须同时包含大小字母和至少1个数字，不得与您电子邮件的任何部分相同，并且必须包含8个字符。</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                        <td></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="info2_fail d-none" src="../image/reg/myprofile-error-icon.png" alt="">
+                                    </td>
+                                    <td class="alarm info2_fail d-none">密码不符合密码格式要求</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="info2_success d-none" src="../image/reg/myprofile-success-icon.png" alt="">
+                                    </td>
+                                    <td class="alarm info2_success d-none">密码有效</td>
+                                </tr>
+    
+                            </table>
+                        </td>
+                </tr>
+                <!--密码确认 -->
+                <tr>
+                        <td class="title td_position">重新键入密码</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="reupwd" type="password" class="email-content">
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info3_fail d-none">
+                                    </td>
+                                    <td class="td_position">
+                                        <img class="info3_success d-none" src="image/reg/myprofile-success-icon.png" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                        <td></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="info3_fail d-none" src="../image/reg/myprofile-error-icon.png" alt="">
+                                    </td>
+                                    <td class="alarm info3_fail d-none">密码不匹配</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        
+                                    </td>
+                                    <td class="alarm"></td>
+                                </tr>
+    
+                            </table>
+                        </td>
+                </tr>
+            </table>
+            <table>
+                <!-- 国家 -->
+                <tr>
+                        <td class="title td_position">国家/地区</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer_t">
+                                        <select name="region" id="select">
+                                            <option value="选择" title=”“>-选择-</option>
+                                            <option value="中国" title="">中国</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 姓名 -->
+                <tr>
+                        <td class="title td_position">姓名</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer p-w">
+                                        <!-- 姓 -->
+                                        <input id="clast" type="text" class="email-content">
+                                        <!-- 姓 警告 -->
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info4_fail d-none">
+                                    </td>
+                                        <!-- 姓 成功 -->
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info4_success d-none"></td>
+                                    <td class="td_position outer p-w">
+                                        <!-- 名 -->
+                                        <input id="cfirst" type="text" class="email-content">
+                                        <!-- 名 警告 -->
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info5_fail d-none">
+                                    </td>
+                                        <!-- 名 成功 -->
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info5_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <!-- 姓 错误提示 -->
+                                <td id="info_clast_icon">
+                                    <!-- <img src="image/reg/myprofile-error-icon.png" alt="" class=""> -->
+                                </td> 
+                                <td id="info_clast" class="alarm p-w">   
+                                    <!-- <span>姓氏 不得包含 > < () % ; \ $</span> -->
+                                </td>
+                                <!-- 名 错误提示 -->
+                                <td id="info_cfirst_icon">
+                                    <!-- <img src="image/reg/myprofile-error-icon.png" alt="" class="cname_icon"> -->
+                                </td>
+                                <td id="info_cfirst" class="alarm p-w cname">
+                                    <!-- <span>名字 不得包含 > < () % ; \ $</span> -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 英文名 -->
+                <tr>
+                        <td class="title td_position">英文名字</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer p-w">
+                                        <input id="elast" type="text" class="email-content">
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info6_fail d-none">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info6_success d-none"></td>
+                                    <td class="td_position outer p-w">
+                                        <input id="efirst" type="text" class="email-content">
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info7_fail d-none">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info7_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td id="info_elast_icon">
+                                    <!-- <img src="../image/reg/myprofile-error-icon.png" alt=""> -->
+                                </td>
+                                <td id="info_elast" class="alarm p-w">
+                                    <!-- <span>英文姓氏 不得包含 > < () % ; \ $</span> -->
+                                </td>
+                                <td id="info_efirst_icon">
+                                    <!-- <img src="../image/reg/myprofile-error-icon.png" alt=""> -->
+                                </td>
+                                <td  id="info_efirst"  class="alarm p-w">
+                                    <!-- <span>英文名字 不得包含 > < () % ; \ $</span> -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 职位 -->
+                <tr>
+                    <td class="title td_position">职位</td>
+                    <td class="td_position">
+                        <table>
+                            <tr>
+                                <td class="td_position outer">
+                                    <input id="position" type="text" class="email-content">
+                                </td>
+                                <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info8_success d-none"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 办公电话 -->
+                <tr>
+                        <td class="title td_position">办公电话</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="tel" type="text" class="email-content">
+                                        <img src="image/reg/icon1.png" alt="" class="input_img info9_fail d-none">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info9_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 错误/正确提示 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="image/reg/myprofile-error-icon.png" alt="" class="info9_fail d-none">
+                                </td>
+                                <td class="alarm info9_fail d-none">此电话号码无效</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 分割线 -->
+                <tr>
+                    <td style="padding-top:15px"></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:30px"></td>
+                </tr>
+                <!-- 公司名称 -->
+                <tr>
+                        <td class="title td_position">公司名称</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="company" type="text" class="email-content">
+                                    </td>
+                                    <td><img src="../image/reg/myprofile-success-icon.png" alt="" class="info10_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 地址 -->
+                <tr>
+                        <td class="title td_position">地址</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="address1" type="text" class="email-content">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info11_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <tr>
+                        <td class="td_position"></td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="address2" type="text" class="email-content">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info12_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 城市 -->
+                <tr>
+                        <td class="title td_position">城市</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="city" type="text" class="email-content">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info13_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 省 -->
+                <tr>
+                        <td class="title td_position">省/自治区/直辖市</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer_t">
+                                        <select name="region" id="province">
+                                            <option value="选择" title=”“>-选择-</option>
+                                            <option value="浙江" title="">浙江</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 邮政编码 -->
+                <tr>
+                        <td class="title td_position">邮政编码</td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="td_position outer">
+                                        <input id="postCode" type="text" class="email-content">
+                                    </td>
+                                    <td><img src="image/reg/myprofile-success-icon.png" alt="" class="info14_success d-none"></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- checkbox -->
+                <tr>
+                    <td class="td_position"></td>
+                    <td class="td_position">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="email-content" id="confir">
+                                </td>
+                                <td><p id="confir">是的，请向我发送有关Oracle产品、服务和活动的营销通信。</p></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 取消订阅 -->
+                <tr>
+                    <td class="td_position"></td>
+                    <td class="td_position">
+                        <table>
+                            <tr>
+                                <td class="choice">
+                                    <p>您可以选择停止接收所有营销通信：</p>
+                                </td>
+                                <td class="choice"><a href="javascript:;" class="choice_a">取消订阅</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 注册提示 -->
+                <tr>
+                        <td class="td_position"></td>
+                        <td class="td_position">
+                            <table>
+                                <tr>
+                                    <td class="remind">
+                                        <span>
+                                            单机下方的“创建账户”按钮，即表示您了解并同意在不违反
+                                            <a href="javascript:；" class="choice_a">Oracle.com 使用条款</a>
+                                            的情况下使用 Oracle 网站。有关于 Oracle 收集和使用您的个人信息（包括访问、保留、修改、删除、安全性、跨境传输以及其他肢体的信息）的详细信息，请访问
+                                            <a href="javascript:;" class="choice_a">Oracle 隐私政策</a>
+                                        </span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+                <!-- 分割线 -->
+                <tr>
+                    <td style="padding-top:9px"></td>
+                </tr>
+                <!-- 创建按钮 -->
+                <tr>
+                    <td class="td_position"></td>
+                    <td id="btn" class="td_position btn_reg">
+                        <div class=“button_reg”>
+                            <a href="javascript:;" class="btn">
+                                <span>创建</span>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<script src="js/reg.js"></script>
+</body>
+</html>

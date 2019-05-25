@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body class="bg">
+    <div class="img">
+        <img  alt="" class="bg_img">
+    </div>
+    <!-- logo -->
+    <div class="logo_outer">
+        <div class="logo_bg">
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <div style="margin-top:0px;"></div>
+    <!-- form -->
+    <div class="table_position">
+        <h2>Oracle 账户登录</h2>
+        <ul>
+            <!-- 用户名 -->
+            <li>
+                <div class="li_position main1">
+                    <input type="text" id="email" class="input_outer bgColor">
+                    <label id="alarm" for="email">用户名</label>
+                </div>
+            </li>
+            <!-- 密码 -->
+            <li>
+                <div class="li_position main1 main2">
+                    <input type="password" id="upwd" class="input_outer bgColor">
+                    <label id="alarm" for="upwd">密码</label>
+                </div>
+            </li>
+            <!-- 登录提示 -->
+            <li>
+                <div id="login_err" class="info_icon d-none">
+                    <span class="info">请输入正确的用户名和密码</span>
+                </div>
+                <div id="login_fail" class="info_icon d-none">
+                    <span class="info">登录失败</span>
+                </div>
+            </li>
+            <!-- 登录 -->
+            <li>
+                <button id="btn" class="btn">登录</button>
+                <div class="need_help">
+                    <a href="javascript:;">需要帮助？</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div style="margin-top:10px;"></div>
+    <div class="table_position">
+        <h2 class="light">没有Oracle账号？</h2>
+        <ul>
+            <li>
+                <button id="btn1" class="btn white_btn">创建账户</button>
+            </li>
+            
+        </ul>
+        <ul class="policy">
+            <li>
+                <span>&copy; Oracle </span>
+            </li>
+            <li class="policy_list">
+                <a href="javascript:;"> 使用条款 </a>
+            </li>
+            <li class="policy_list">
+                <a href="javascript:;"> 隐私政策 </a>
+            </li>
+        </ul>
+    </div>
+<script src="js/login.js"></script>
+</body>
+</html>

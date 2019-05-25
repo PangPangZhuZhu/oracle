@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="boot/css/bootstrap.css">
+    <link rel="stylesheet" href="CSS/header.css"/>
+    <script src="boot/js/jquery.min.js"></script>
+    <script src="boot/js/popper.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- nav-->
+    <div class="row d-flex flex-sm-row flex-nowrap justify-content-start">
+        <!-- nav左侧:menu+logo-->
+        <div class="col-lg-3 col-md-4 col-sm-8 navbar navbar-light bg-light" id="nav_left">
+            <ul class="list-unstyled d-flex">
+                <!-- menu-->
+                <li>
+                    <button data-toggle="collapse" data-target="#content" class="navbar-toggler">
+                        <span class="navbar-toggler-icon"></span>
+                        <p>Menu</p>
+                    </button>
+                </li>
+                <!-- logo-->
+                <li>
+                    <div class="header_logo flex">
+                        <div class="logo">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- nav右侧:功能键左-->
+        <div class="col-lg-5 col-md-4 col-sm-2">
+            <ul class="list-unstyled d-flex fun_search text-nowrap">
+                <li  class="tool1">
+                    <div class="input_border text-left">
+                        <input type="text" class="search_input" placeholder="Search"/>
+                        <span>Search</span>
+                        <a href="#" class="tool1_search nav-link flex-sm-row navbar-expand-sm" data-toggle="collapse" data-target="#btns_input"></a>
+                    </div>
+            </ul>
+        </div>
+        <!-- 折叠导航-->
+        <div class="col-lg-4 col-md-4 col-sm-2 clearfix">
+            <div class="navbar navbar-expand-md bg-light navbar-light" id="btns1">
+                <button data-toggle="collapse" data-target="#func_menu" class="navbar-toggler ">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <!-- 功能键右-->
+                <div class="text-nowrap collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="tool1 nav-item">
+                        <span>Sign In</span>
+                        <a href="#" class="tool1_icon nav-link flex-sm-column"></a>
+                    </li>
+                        <li class="tool1 nav-item">
+                        <span>Country/Region</span>
+                        <a href="#" class="tool2_icon nav-link flex-sm-column"></a>
+                    </li>
+                        <li class="tool1 nav-item">
+                        <span>Contact</span>
+                        <a href="#" class="tool3_icon nav-link flex-sm-column"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -->
+</div>
+</body>
+</html>
